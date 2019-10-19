@@ -1,0 +1,47 @@
+body {
+  z-index: 0;
+  overflow-x: hidden;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  & > .content {
+    flex: 1 0 auto;
+    position: relative;
+    overflow: hidden;
+    h1 {
+      display: inline-block;
+      padding: 5px 300px;
+      text-transform: uppercase;
+      font-size: 24px;
+      font-family: $font-family;
+      font-weight: $font-weight--600;
+      color: #ffffff;
+      border-radius: 0 0 70px 70px;
+      @media screen {
+        @media (max-width: 1300px) {
+          padding: 5px 200px;
+        }
+        @media (max-width: 1050px) {
+          padding: 5px 100px;
+        }
+        @media (max-width: 460px) {
+          font-size: 18px;
+          padding: 5px 40px;
+        }
+      }
+    }
+  }
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: map-get($wrapper, 'padding');
+  max-width: map-get($wrapper, 'max-width');
+  min-width: map-get($wrapper, 'min-width');
+}
+
+.header-block {
+  text-align: center;
+}

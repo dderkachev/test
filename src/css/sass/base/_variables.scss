@@ -1,0 +1,43 @@
+// Семантические цвета
+
+$base-color:                  #232323;
+$base-text-color:             #232323;
+
+$box-shadow:                  0px 16px 16px rgba(0, 0, 0, 0.25);
+
+$link-color:                  #ff2a62;
+$link-color--active:          #ff2a62;
+
+$red:                         #ed1b24;
+$grey:                        #696969;
+
+// Базовая типографика
+
+$font-size--root:             10px;
+
+$font-size:                   14px; // rem(14px)
+
+$font-family:                 'Roboto', sans-serif;
+$font-family-logo:            'Copperplate Gothic Bold', sans-serif;
+
+$font-weight--100:            100;
+$font-weight--200:            200;
+$font-weight--300:            300;
+$font-weight--400:            400;
+$font-weight--500:            500;
+$font-weight--600:            600;
+$font-weight--700:            700;
+$font-weight--800:            800;
+$font-weight--900:            900;
+
+$font-weight:                 $font-weight--400;
+
+$line-height:                 normal;
+
+// Ширины
+
+$wrapper: (
+  'max-width': 1920px,
+  'min-width': 280px,
+  'padding': 0 100px
+);

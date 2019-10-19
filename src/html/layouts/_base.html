@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="HandheldFriendly" content="true">
+
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
+    <meta name="keywords" content="{{ keywords }}">
+
+    <link href="css/{% if NODE_ENV == "dev" %}plugins.css{% else %}plugins.min.css{% endif %}" rel="stylesheet">
+    <link href="css/{% if NODE_ENV == "dev" %}styles.css{% else %}styles.min.css{% endif %}" rel="stylesheet">
+
+    {% include 'layouts/_favicon.html' %}
+
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        {% include 'sections/header.html' %}
+        {% block content %}{% endblock %}
+    </div>
+    {% include 'sections/footer.html' %}
+</div>
+
+<script src="js/combined.min.js"></script>
+<script src="js/libs.js"></script>
+
+{% include 'layouts/_counters.html' %}
+</body>
+</html>

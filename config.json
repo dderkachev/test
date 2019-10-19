@@ -1,0 +1,28 @@
+{
+  "addCssLibs": [
+    "./src/css/csslibs/*.css"
+  ],
+  "addJsBefore": [
+    "./node_modules/jquery/dist/jquery.min.js"
+  ],
+  "addJsAfter": [
+    "./src/js/jslibs/slick.min.js",
+    "./src/js/jslibs/jquery-ui.min.js",
+    "./src/js/jslibs/magnific-popup.min.js"
+  ],
+  "copiedJs": [
+    "./src/js/libs.js"
+  ],
+  "dirs": {
+    "srcPath": "./src/",
+    "buildPath": "./build/",
+    "cssPath": "./src/css/",
+    "htmlPath": "./src/html/",
+    "imgGeneral": "./src/images/general/",
+    "imgContent": "./src/images/content/",
+    "spritePNG": "./src/images/sprite/png/",
+    "spriteSVG": "./src/images/sprite/svg/",
+    "fontsPath": "./src/fonts/",
+    "staticPath": "./src/static/"
+  }
+}
