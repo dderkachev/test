@@ -1,0 +1,45 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      margin-right: rem(22);
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        font-size: rem(14);
+        font-weight: $font-weight--500;
+        color: #ffffff;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .logo {
+    position: relative;
+    width: rem(145);
+    height: rem(20);
+    background: url("/images/logo.png") center no-repeat;
+    background-size: contain;
+    &::before {
+      position: absolute;
+      content: '';
+      left: calc(50% - 37px);
+      bottom: -10px;
+      width: 77px;
+      height: 2px;
+      background-color: #ffffff;
+    }
+  }
+  &--left {
+    margin-right: rem(102);
+  }
+  &--right {
+    margin-left: rem(102);
+  }
+
+}
