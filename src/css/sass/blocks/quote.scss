@@ -1,0 +1,38 @@
+.quote {
+  margin-bottom: 50px;
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  p {
+    position: relative;
+    top: -10px;
+    max-width: 560px;
+    margin-right: 180px;
+    font-size: 45px;
+    font-weight: $font-weight--400;
+    letter-spacing: 1px;
+    color: $link-color;
+    span {
+      font-family: $font-family--logo;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      width: 50px;
+      height: 40px;
+      background: url("/images/quotes.png") center no-repeat;
+      background-size: contain;
+    }
+    &::before {
+      top: -10px;
+      left: -90px;
+      transform: rotate(180deg);
+    }
+    &::after {
+      right: -50px;
+      bottom: 0;
+    }
+  }
+}

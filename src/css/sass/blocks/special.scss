@@ -1,0 +1,12 @@
+.special {
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  p {
+    max-width: 370px;
+    margin-left: 455px;
+    font-size: 25px;
+    font-weight: $font-weight--500;
+  }
+}

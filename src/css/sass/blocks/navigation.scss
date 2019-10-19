@@ -7,30 +7,51 @@
     display: flex;
     align-items: center;
     li {
+      position: relative;
       margin-right: rem(22);
       &:last-child {
         margin-right: 0;
+      }
+      &::after {
+        position: absolute;
+        content: '';
+        right: 0;
+        bottom: -5px;
+        left: 0;
+        height: 2px;
+        background-color: #ffffff;
+        opacity: 0;
+        @include transition();
+      }
+      &:hover {
+        &::after {
+          opacity: 1;
+        }
       }
       a {
         font-size: rem(14);
         font-weight: $font-weight--500;
         color: #ffffff;
         text-transform: uppercase;
+        @include transition();
       }
     }
   }
   .logo {
     position: relative;
-    width: rem(145);
-    height: rem(20);
-    background: url("/images/logo.png") center no-repeat;
-    background-size: contain;
+    font-family: $font-family--logo;
+    font-weight: $font-weight--700;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
     &::before {
       position: absolute;
       content: '';
       left: calc(50% - 37px);
-      bottom: -10px;
-      width: 77px;
+      bottom: -5px;
+      width: 80px;
       height: 2px;
       background-color: #ffffff;
     }

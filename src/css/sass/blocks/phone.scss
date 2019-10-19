@@ -1,6 +1,11 @@
 .phone {
   display: inline-block;
   font-size: 35px;
+  font-family: $font-family--num;
   font-weight: $font-weight--700;
   color: $link-color;
+  @include transition();
+  &:hover {
+    color: darken($link-color, 10%);
+  }
 }

@@ -1,5 +1,15 @@
 .main {
-  min-height: 500px;
-  background: url("/images/header-image.jpg") top no-repeat;
-  background-size: contain;
+  position: relative;
+  padding-bottom: 30px;
+  &::after {
+    position: absolute;
+    content: '';
+    right: 0;
+    bottom: 0;
+    width: 1003px;
+    height: 328px;
+    background: url("/images/gray-triangle.png") center no-repeat;
+    background-size: contain;
+    z-index: -1;
+  }
 }

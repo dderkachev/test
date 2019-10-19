@@ -9,7 +9,7 @@ $link-color:                  #ff2a62;
 $link-color--active:          #ff2a62;
 
 $red:                         #ed1b24;
-$grey:                        #696969;
+$gray:                        #696969;
 
 // Базовая типографика
 
@@ -18,7 +18,8 @@ $font-size--root:             10px;
 $font-size:                   14px; // rem(14px)
 
 $font-family:                 'Roboto', sans-serif;
-$font-family-logo:            'Copperplate Gothic Bold', sans-serif;
+$font-family--logo:           'Open Sans', sans-serif;
+$font-family--num:            'Lato', sans-serif;
 
 $font-weight--100:            100;
 $font-weight--200:            200;
