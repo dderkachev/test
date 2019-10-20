@@ -1,5 +1,13 @@
 .quote {
   margin-bottom: 50px;
+  @media screen {
+    @media (max-width: 960px) {
+      margin-bottom: 25px;
+    }
+    @media (max-width: 460px) {
+      margin-bottom: 10px;
+    }
+  }
   .wrapper {
     display: flex;
     justify-content: center;
@@ -13,6 +21,31 @@
     font-weight: $font-weight--400;
     letter-spacing: 1px;
     color: $link-color;
+    @media screen {
+      @media (max-width: 1050px) {
+        margin-right: 0;
+      }
+      @media (max-width: 960px) {
+        margin: auto;
+        max-width: 450px;
+        font-size: 35px;
+      }
+      @media (max-width: 650px) {
+        max-width: 350px;
+        font-size: 25px;
+      }
+      @media (max-width: 550px) {
+        max-width: 325px;
+      }
+      @media (max-width: 420px) {
+        max-width: 270px;
+        font-size: 20px;
+      }
+      @media (max-width: 360px) {
+        max-width: 240px;
+        font-size: 18px;
+      }
+    }
     span {
       font-family: $font-family--logo;
     }
@@ -24,15 +57,49 @@
       height: 40px;
       background: url("/images/quotes.png") center no-repeat;
       background-size: contain;
+      @media screen {
+        @media (max-width: 650px) {
+          width: 40px;
+          height: 30px;
+        }
+        @media (max-width: 420px) {
+          width: 30px;
+          height: 20px;
+        }
+      }
     }
     &::before {
       top: -10px;
       left: -90px;
       transform: rotate(180deg);
+      @media screen {
+        @media (max-width: 650px) {
+          left: -60px;
+        }
+        @media (max-width: 460px) {
+          left: -45px;
+        }
+        @media (max-width: 420px) {
+          left: -30px;
+          top: 0;
+        }
+      }
     }
     &::after {
-      right: -50px;
+      right: -70px;
       bottom: 0;
+      @media screen {
+        @media (max-width: 650px) {
+          right: -50px;
+        }
+        @media (max-width: 460px) {
+          right: -40px;
+        }
+        @media (max-width: 420px) {
+          right: -25px;
+          bottom: -3px;
+        }
+      }
     }
   }
 }

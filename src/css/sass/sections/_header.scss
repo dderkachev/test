@@ -9,19 +9,41 @@
       position: relative;
       display: flex;
       justify-content: space-between;
-      padding-bottom: 90px;
+      padding-bottom: 115px;
+      @media screen {
+        @media (max-width: 1050px) {
+          padding-bottom: 125px;
+        }
+        @media (max-width: 900px) {
+          padding-bottom: 330px;
+        }
+        @media (max-width: 620px) {
+          padding-bottom: 185px;
+        }
+      }
       &::before {
         position: absolute;
         content: '';
         top: 0;
         left: 0;
         right: 0;
-        max-width: 2000px;
-        width: 100%;
+        width: 2000px;
         height: 1014px;
         background: url("/images/header-img.jpg") top left no-repeat;
         background-size: contain;
         z-index: -1;
+        @media (max-width: 1800px) {
+          left: -200px;
+        }
+        @media (max-width: 1400px) {
+          left: -400px;
+        }
+        @media (max-width: 900px) {
+          left: 0;
+        }
+        @media (max-width: 620px) {
+          top: -200px;
+        }
       }
     }
   }
@@ -31,8 +53,35 @@
   .info {
     width: 50%;
     padding-left: 70px;
+    @media screen {
+      @media (max-width: 900px) {
+        width: 100%;
+        padding-left: 50px;
+      }
+      @media (max-width: 620px) {
+        padding-left: 0;
+      }
+    }
     &-top {
-      margin-bottom: 210px;
+      margin-bottom: 250px;
+      @media screen {
+        @media (max-width: 1400px) {
+          margin-bottom: 270px;
+        }
+        @media (max-width: 1050px) {
+          margin-bottom: 280px;
+        }
+        @media (max-width: 900px) {
+          margin-bottom: 50px;
+        }
+        @media (max-width: 620px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+      }
       h2 {
         max-width: 400px;
         margin-top: 35px;
@@ -40,6 +89,14 @@
         font-size: 60px;
         font-weight: $font-weight--700;
         text-transform: uppercase;
+        @media screen {
+          @media (max-width: 1050px) {
+            font-size: 55px;
+          }
+          @media (max-width: 620px) {
+            font-size: 45px;
+          }
+        }
       }
       .btn {
         display: inline-block;
@@ -62,14 +119,30 @@
         margin-left: 15px;
         font-size: 22px;
         color: $gray;
+        @media screen {
+          @media (max-width: 620px) {
+            margin-left: 0;
+          }
+        }
       }
       .phone {
         margin-left: 15px;
+        @media screen {
+          @media (max-width: 620px) {
+            margin-left: 0;
+          }
+        }
       }
     }
     &-bottom {
       position: relative;
       margin-left: 15px;
+      @media screen {
+        @media (max-width: 620px) {
+          margin-left: 0;
+          padding-left: 60px;
+        }
+      }
       h2 {
         max-width: 230px;
         font-family: $font-family;
@@ -115,6 +188,11 @@
         height: 48px;
         background-color: $link-color;
         border-radius: 50%;
+        @media screen {
+          @media (max-width: 620px) {
+            left: 0;
+          }
+        }
       }
     }
   }

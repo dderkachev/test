@@ -1,5 +1,10 @@
 .menu {
   padding-left: 20px;
+  @media screen {
+    @media (max-width: 900px) {
+      display: none;
+    }
+  }
   ul {
     display: inline-block;
     margin-top: 45px;
@@ -17,11 +22,18 @@
       font-weight: $font-weight--500;
       color: $link-color;
       text-transform: uppercase;
+      outline: 0;
       &:hover {
         .menu-item__header::after {
           height: 6px;
           transform: translateX(50px);
           @include transition();
+          @media screen {
+            @media (max-width: 768px) {
+              transform: unset;
+              height: 2px;
+            }
+          }
         }
       }
     }

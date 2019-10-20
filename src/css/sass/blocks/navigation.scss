@@ -1,4 +1,5 @@
 .navigation {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,6 +7,59 @@
   ul {
     display: flex;
     align-items: center;
+    &.navigation--mobile {
+      position: absolute;
+      top: 62px;
+      right: 0;
+      display: none;
+      width: 320px;
+      background-color: #ffffff;
+      padding: 15px 20px;
+      z-index: 5;
+      @media screen {
+        @media (max-width: 380px) {
+          right: 0;
+          left: 0;
+          width: auto;
+        }
+      }
+      li {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        text-align: center;
+        a {
+          color: $link-color;
+        }
+        &.menu-item {
+          display: none;
+          a {
+            max-width: none;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          @media screen {
+            @media (max-width: 900px) {
+              display: block;
+            }
+          }
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      &.active {
+        display: block;
+      }
+    }
+    @media screen {
+      @media (max-width: 900px) {
+        &.navigation--left,
+        &.navigation--right {
+          display: none;
+        }
+      }
+    }
     li {
       position: relative;
       margin-right: rem(22);
@@ -26,6 +80,9 @@
       &:hover {
         &::after {
           opacity: 1;
+          @media (max-width: 768px) {
+            opacity: 0;
+          }
         }
       }
       a {
@@ -39,6 +96,7 @@
   }
   .logo {
     position: relative;
+    top: -5px;
     font-family: $font-family--logo;
     font-weight: $font-weight--700;
     font-size: 30px;
@@ -57,10 +115,37 @@
     }
   }
   &--left {
-    margin-right: rem(102);
+    margin-right: 102px;
   }
   &--right {
-    margin-left: rem(102);
+    margin-left: 102px;
+  }
+  .btn--menu {
+    display: none;
+    width: 35px;
+    height: 35px;
+    background: url("/images/menu.svg") center no-repeat;
+    background-size: cover;
+    cursor: pointer;
+  }
+  @media screen {
+    @media (max-width: 960px) {
+      &--left {
+        margin-right: 30px;
+      }
+      &--right {
+        margin-left: 30px;
+      }
+    }
+    @media (max-width: 900px) {
+      justify-content: space-between;
+      &--menu {
+        display: block;
+      }
+      .btn--menu {
+        display: block;
+      }
+    }
   }
 
 }

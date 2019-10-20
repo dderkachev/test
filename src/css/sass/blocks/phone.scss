@@ -8,4 +8,9 @@
   &:hover {
     color: darken($link-color, 10%);
   }
+  @media screen {
+    @media (max-width: 620px) {
+      font-size: 25px;
+    }
+  }
 }

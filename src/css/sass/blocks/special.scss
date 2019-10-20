@@ -8,5 +8,28 @@
     margin-left: 455px;
     font-size: 25px;
     font-weight: $font-weight--500;
+    @media screen {
+      @media (max-width: 960px) {
+        margin-left: auto;
+        max-width: 270px;
+        font-size: 20px;
+      }
+      @media (max-width: 650px) {
+        max-width: 250px;
+        font-size: 18px;
+      }
+      @media (max-width: 550px) {
+        max-width: 210px;
+        font-size: 16px;
+      }
+      @media (max-width: 460px) {
+        max-width: 180px;
+        font-size: 14px;
+      }
+      @media (max-width: 360px) {
+        max-width: 155px;
+        font-size: 12px;
+      }
+    }
   }
 }

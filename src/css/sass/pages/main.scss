@@ -11,5 +11,16 @@
     background: url("/images/gray-triangle.png") center no-repeat;
     background-size: contain;
     z-index: -1;
+    @media screen {
+      @media (max-width: 1750px) {
+        bottom: -80px;
+      }
+      @media (max-width: 1250px) {
+        bottom: -145px;
+      }
+      @media (max-width: 960px) {
+        display: none;
+      }
+    }
   }
 }
