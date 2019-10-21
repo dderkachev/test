@@ -83,7 +83,7 @@
       }
       @media (max-width: 400px) {
         h2 {
-          font-size: 25px;
+          font-size: 23px;
         }
       }
     }
@@ -118,6 +118,11 @@
     }
     &__description {
       position: relative;
+      @media screen {
+        @media (max-width: 460px) {
+          width: 100%;
+        }
+      }
       h3 {
         margin-bottom: 30px;
         font-size: 25px;

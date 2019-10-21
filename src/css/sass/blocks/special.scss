@@ -2,6 +2,11 @@
   .wrapper {
     display: flex;
     justify-content: center;
+    @media screen {
+      @media (max-width: 960px) {
+        justify-content: flex-end;
+      }
+    }
   }
   p {
     max-width: 370px;
@@ -10,7 +15,7 @@
     font-weight: $font-weight--500;
     @media screen {
       @media (max-width: 960px) {
-        margin-left: auto;
+        margin-left: 0;
         max-width: 270px;
         font-size: 20px;
       }

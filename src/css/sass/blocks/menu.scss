@@ -11,6 +11,11 @@
   }
   &-item {
     margin-bottom: 32px;
+    @media screen {
+      @media (max-width: 1050px) {
+        margin-bottom: 25px;
+      }
+    }
     &:last-child {
       margin-bottom: 0;
     }
